@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width">
+        <title>Clicker Game</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="score-box">
+                <text id="score"/>
+            </div>
+
+            <div id="btn-box">
+                <button class="btn" id="click">
+                    Click
+                </button>
+
+                <button class="btn" id="up-click">
+                    Upgrade per Click [+2]
+                    <text/>
+                </button>
+
+                <button class="btn" id="up-idle" key="0">
+                    Upgrade per Second [+2]
+                    <text/>
+                </button>
+
+                <button class="btn" id="surprise-click">
+                    Surprise
+                    <text/>
+                </button>
+            </div>
+            
+            <text id="status"></text>
+
+            <div class="msg-bars"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

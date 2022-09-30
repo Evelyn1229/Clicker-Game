@@ -1,0 +1,162 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  text-align: center;
+}
+
+button, text {
+  font-family: "Patrick Hand";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#score-box {
+  /* width: 150px; */
+  width: fit-content; /* Broken, I Quit */
+  min-width: 150px; /* Minimum 200px */
+  margin-bottom: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 3px solid #FFF;
+  border-radius: 15px;
+  color: #FFF;
+  font-size: 45px;
+}
+
+#btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+  width: 350px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 2px solid #FAC059;
+  border-radius: 7px;
+  color: #FAEFEF;
+  font-size: 35px;
+}
+
+.btn:hover {
+  width: 360px;
+  padding: 25px 0;
+  background: #FAC059;
+  box-shadow: 0 0 10px #FAC059; 
+  color: #333;
+  transition: 0.5s;
+}
+
+.btn text {
+  max-width: fit-content;
+  margin-top: 9px;
+  padding: 1px 12px;
+  background: #AFFA59;
+  border-radius: 5px;
+  color: #333;
+  font-size: 25px;
+}
+
+.btn:hover text {
+  background: #93D24B;
+}
+
+.btn:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* Update Content */
+#status {
+  margin-top: 20px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.msg-bars {
+  display: flex;
+  flex-direction: column;
+  position: absolute; /* I Think Right Side Is Better idk */
+  right: 15px;
+  bottom: 15px;
+}
+
+.msg {
+  width: 330px;
+  height: 45px;
+  padding: 5px 10px;
+  display: none;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  background: #E0E0E0;
+  border-radius: 8px;
+}
+ 
+/* Fade In Effect, Might Change */
+.msg.active {
+  display: flex;
+  animation: fadein 0.5s, fadeout 0.5s 3s;
+}
+
+/* Tragedy */
+/* Text Will Go In When Surprise Button Is Clicked */
+@keyframes fadein {
+  from {
+    right: -50px;
+    opacity: 0;
+  } to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/* After 4 Second The Text Will Fade Out */
+@keyframes fadeout {
+  from {
+    right: 0;
+    opacity: 1;
+  } to {
+    right: -50px;
+    opacity: 0;
+  }
+}
+
+.msg:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.msg .icon {
+  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+}
+
+.msg .msg-content {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+}
